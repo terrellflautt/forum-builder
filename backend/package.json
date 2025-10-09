@@ -1,0 +1,30 @@
+{
+  "name": "forum-builder-backend",
+  "version": "1.0.0",
+  "description": "Forum Builder SaaS API",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "serverless deploy --stage prod",
+    "deploy:dev": "serverless deploy --stage dev",
+    "offline": "serverless offline"
+  },
+  "keywords": [
+    "forum",
+    "saas",
+    "serverless"
+  ],
+  "author": "SnapIT Software",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.400.0",
+    "@aws-sdk/lib-dynamodb": "^3.400.0",
+    "google-auth-library": "^9.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "stripe": "^13.0.0",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "serverless": "^3.35.0",
+    "serverless-offline": "^13.0.0"
+  }
+}
