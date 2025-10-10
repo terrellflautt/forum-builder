@@ -306,6 +306,11 @@ export default function Pricing() {
               <a href="https://snapitsoftware.com">SnapIT Software</a>
               <a href="https://snapitforms.com">SnapIT Forms</a>
               <a href="https://snapitqr.com">SnapIT QR</a>
+              <a href="https://burn.snapitsoftware.com">Burn After Reading</a>
+              <a href="https://polls.snapitsoftware.com">SnapIT Polls</a>
+              <a href="https://snapiturl.com">SnapIT URL</a>
+              <a href="https://pdf.snapitsoftware.com">PDF Tools</a>
+              <a href="https://urlstatuschecker.com">URL Status Checker</a>
             </div>
           </div>
           <div className="footer-bottom">
