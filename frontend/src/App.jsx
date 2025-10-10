@@ -5,6 +5,7 @@ import LandingPage from './pages/LandingPage';
 import Dashboard from './pages/Dashboard';
 import Pricing from './pages/Pricing';
 import Discover from './pages/Discover';
+import UserProfile from './pages/UserProfile';
 import Login from './pages/Login';
 import ForumSettings from './pages/ForumSettings';
 
@@ -32,6 +33,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/discover" element={<Discover />} />
+          <Route path="/@:username" element={<UserProfile />} />
           <Route
             path="/dashboard"
             element={
