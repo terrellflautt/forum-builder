@@ -1,0 +1,471 @@
+.dashboard-page {
+  min-height: 100vh;
+  background: var(--cream);
+}
+
+.dashboard-header {
+  background: linear-gradient(135deg, var(--pink) 0%, var(--pink-dark) 100%);
+  color: white;
+  padding: 1.25rem 0;
+  box-shadow: var(--shadow-lg);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.dashboard-header .header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dashboard-header .logo-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+}
+
+.user-menu {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.user-email {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  opacity: 0.95;
+}
+
+.dashboard-container {
+  padding: 3rem 0;
+}
+
+/* Subscription Card */
+.subscription-card {
+  background: white;
+  border: 3px solid var(--pink);
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--shadow-md);
+}
+
+.subscription-info h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.tier-badge {
+  font-size: 0.875rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.tier-badge.free {
+  background: var(--gray-light);
+  color: var(--gray-dark);
+}
+
+.tier-badge.pro {
+  background: var(--pink);
+  color: white;
+}
+
+.tier-badge.business {
+  background: var(--black);
+  color: white;
+}
+
+.subscription-info p {
+  color: var(--gray);
+  font-size: 1rem;
+}
+
+/* Forums Section */
+.forums-section {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.section-header h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--black);
+}
+
+.limit-warning {
+  background: #FFF3CD;
+  border: 2px solid #FFC107;
+  border-radius: 0.5rem;
+  padding: 1rem 1.5rem;
+  margin-bottom: 2rem;
+  color: #856404;
+  font-weight: 500;
+}
+
+.limit-warning a {
+  color: var(--pink);
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: white;
+  border: 3px dashed var(--pink);
+  border-radius: 1.5rem;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.empty-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.empty-state h3 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 0.5rem;
+}
+
+.empty-state p {
+  color: var(--gray);
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+}
+
+/* Forums Grid */
+.forums-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.forum-card {
+  background: white;
+  border: 3px solid var(--pink);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  transition: all var(--transition);
+  animation: fadeIn 0.5s ease-out;
+}
+
+.forum-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-pink);
+}
+
+.forum-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.forum-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--black);
+  margin: 0;
+  flex: 1;
+}
+
+.status-badge {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.625rem;
+  border-radius: 999px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.status-badge.active {
+  background: #D4EDDA;
+  color: #155724;
+}
+
+.status-badge.inactive {
+  background: var(--gray-light);
+  color: var(--gray-dark);
+}
+
+.forum-description {
+  color: var(--gray);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.forum-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px dashed var(--cream-dark);
+}
+
+.stat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: var(--gray);
+  font-weight: 600;
+}
+
+.stat-value {
+  font-size: 0.875rem;
+  color: var(--black);
+  font-weight: 600;
+  word-break: break-all;
+}
+
+.forum-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.forum-actions .btn {
+  flex: 1;
+}
+
+.btn-danger {
+  background: transparent;
+  color: #DC3545;
+  border: 2px solid #DC3545;
+}
+
+.btn-danger:hover {
+  background: #DC3545;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(220, 53, 69, 0.3);
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 1.5rem;
+  max-width: 600px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: var(--shadow-lg);
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 2rem 1rem;
+  border-bottom: 2px solid var(--cream-dark);
+}
+
+.modal-header h2 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--black);
+  margin: 0;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--gray);
+  cursor: pointer;
+  padding: 0;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  transition: all var(--transition-fast);
+}
+
+.modal-close:hover {
+  background: var(--cream);
+  color: var(--black);
+}
+
+.modal-content form {
+  padding: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  color: var(--black);
+  margin-bottom: 0.5rem;
+  font-size: 0.9375rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border: 2px solid var(--gray-light);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: all var(--transition-fast);
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--pink);
+  box-shadow: 0 0 0 3px rgba(236, 0, 140, 0.1);
+}
+
+.form-group small {
+  display: block;
+  margin-top: 0.375rem;
+  color: var(--gray);
+  font-size: 0.875rem;
+}
+
+.subdomain-input {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+}
+
+.subdomain-input input {
+  border-radius: 0.5rem 0 0 0.5rem;
+  flex: 1;
+}
+
+.subdomain-suffix {
+  background: var(--cream);
+  border: 2px solid var(--gray-light);
+  border-left: none;
+  padding: 0.875rem 1rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+  color: var(--gray);
+  font-size: 1rem;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+
+.error-message {
+  background: #F8D7DA;
+  border: 2px solid #DC3545;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  color: #721C24;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  padding-top: 1rem;
+  border-top: 2px solid var(--cream-dark);
+}
+
+.modal-actions .btn {
+  min-width: 120px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .subscription-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .section-header .btn {
+    width: 100%;
+  }
+
+  .forums-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .user-menu {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5rem;
+  }
+
+  .user-email {
+    font-size: 0.8125rem;
+  }
+
+  .forum-actions {
+    flex-direction: column;
+  }
+
+  .modal-actions {
+    flex-direction: column-reverse;
+  }
+
+  .modal-actions .btn {
+    width: 100%;
+  }
+}
