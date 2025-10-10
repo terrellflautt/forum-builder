@@ -7,6 +7,7 @@ export default function Pricing() {
   const { user, token, API_URL } = useAuth();
   const navigate = useNavigate();
   const [loading, setLoading] = useState(null);
+  const [billingPeriod, setBillingPeriod] = useState('monthly'); // 'monthly' or 'annual'
 
   const plans = [
     {
@@ -29,7 +30,8 @@ export default function Pricing() {
     {
       tier: 'starter',
       name: 'Starter',
-      price: 19,
+      monthlyPrice: 19,
+      annualPrice: 190,
       period: 'month',
       description: 'For small communities',
       features: [
@@ -46,7 +48,8 @@ export default function Pricing() {
     {
       tier: 'pro',
       name: 'Pro',
-      price: 49,
+      monthlyPrice: 49,
+      annualPrice: 441,
       period: 'month',
       description: 'Professional brand control at half the cost',
       features: [
@@ -65,7 +68,8 @@ export default function Pricing() {
     {
       tier: 'growth',
       name: 'Growth',
-      price: 99,
+      monthlyPrice: 99,
+      annualPrice: 891,
       period: 'month',
       description: 'For scaling businesses',
       features: [
@@ -84,7 +88,8 @@ export default function Pricing() {
     {
       tier: 'business',
       name: 'Business',
-      price: 199,
+      monthlyPrice: 199,
+      annualPrice: 1791,
       period: 'month',
       description: 'For professional communities',
       features: [
@@ -103,7 +108,8 @@ export default function Pricing() {
     {
       tier: 'enterprise',
       name: 'Enterprise',
-      price: 499,
+      monthlyPrice: 499,
+      annualPrice: 4491,
       period: 'month',
       description: 'Unlimited scale and customization',
       features: [
@@ -146,7 +152,10 @@ export default function Pricing() {
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ tier })
+        body: JSON.stringify({
+          tier,
+          billingPeriod
+        })
       });
 
       const data = await response.json();
@@ -193,6 +202,22 @@ export default function Pricing() {
         <div className="container">
           <h1>Choose Your Plan</h1>
           <p>Start free and scale as you grow. No hidden fees, cancel anytime.</p>
+
+          {/* Billing Toggle */}
+          <div className="billing-toggle">
+            <button
+              className={billingPeriod === 'monthly' ? 'active' : ''}
+              onClick={() => setBillingPeriod('monthly')}
+            >
+              Monthly
+            </button>
+            <button
+              className={billingPeriod === 'annual' ? 'active' : ''}
+              onClick={() => setBillingPeriod('annual')}
+            >
+              Annual <span className="save-badge">Save 25%</span>
+            </button>
+          </div>
         </div>
       </section>
 
@@ -211,8 +236,24 @@ export default function Pricing() {
                 <div className="card-header">
                   <h3>{plan.name}</h3>
                   <div className="price">
-                    <span className="amount">${plan.price}</span>
-                    <span className="period">/{plan.period}</span>
+                    {plan.tier === 'free' ? (
+                      <>
+                        <span className="amount">${plan.price || 0}</span>
+                        <span className="period">/forever</span>
+                      </>
+                    ) : (
+                      <>
+                        <span className="amount">
+                          ${billingPeriod === 'monthly' ? plan.monthlyPrice : Math.round(plan.annualPrice / 12)}
+                        </span>
+                        <span className="period">/mo</span>
+                        {billingPeriod === 'annual' && (
+                          <div className="annual-note">
+                            ${plan.annualPrice}/year • Save 3 months!
+                          </div>
+                        )}
+                      </>
+                    )}
                   </div>
                   <p className="plan-description">{plan.description}</p>
                 </div>
