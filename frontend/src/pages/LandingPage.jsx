@@ -31,7 +31,7 @@ export default function LandingPage() {
               <Link to="/login" className="btn btn-primary btn-lg">Start Building Free</Link>
               <Link to="/pricing" className="btn btn-secondary btn-lg">View Pricing</Link>
             </div>
-            <p className="hero-note">✓ No credit card required • ✓ Free tier includes 2,000 members</p>
+            <p className="hero-note">✓ No credit card required • ✓ Free tier includes 500 members</p>
           </div>
         </div>
       </section>
@@ -86,7 +86,7 @@ export default function LandingPage() {
               <div className="price">$0<span>/forever</span></div>
               <ul>
                 <li>1 Forum</li>
-                <li>2,000 Members</li>
+                <li>500 Members</li>
                 <li>Basic Themes</li>
                 <li>Community Support</li>
               </ul>
@@ -97,8 +97,8 @@ export default function LandingPage() {
               <h3>Pro</h3>
               <div className="price">$49<span>/month</span></div>
               <ul>
-                <li>5 Forums</li>
-                <li>5,000 Members Each</li>
+                <li>3 Forums</li>
+                <li>3,000 Members Each</li>
                 <li>✨ Custom Domain</li>
                 <li>✨ Remove Branding</li>
                 <li>Priority Support</li>
@@ -109,8 +109,8 @@ export default function LandingPage() {
               <h3>Business</h3>
               <div className="price">$199<span>/month</span></div>
               <ul>
-                <li>25 Forums</li>
-                <li>25,000 Members Each</li>
+                <li>10 Forums</li>
+                <li>10,000 Members Each</li>
                 <li>SSO Integration</li>
                 <li>Account Manager</li>
                 <li>Data Migration</li>

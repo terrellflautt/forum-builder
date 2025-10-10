@@ -17,7 +17,7 @@ export default function Pricing() {
       description: 'Perfect for trying out the platform',
       features: [
         '1 Forum',
-        '2,000 Members',
+        '500 Members',
         'Basic Themes',
         'Community Support',
         'Mobile Responsive',
@@ -33,8 +33,8 @@ export default function Pricing() {
       period: 'month',
       description: 'For small communities',
       features: [
-        '2 Forums',
-        '2,000 Members Each',
+        '1 Forum',
+        '1,500 Members',
         'Premium Themes',
         'Email Support',
         'Custom CSS',
@@ -50,8 +50,8 @@ export default function Pricing() {
       period: 'month',
       description: 'Professional brand control at half the cost',
       features: [
-        '5 Forums',
-        '5,000 Members Each',
+        '3 Forums',
+        '3,000 Members Each',
         'All Starter Features',
         '✨ Custom Domain',
         '✨ Remove Branding',
@@ -69,8 +69,8 @@ export default function Pricing() {
       period: 'month',
       description: 'For scaling businesses',
       features: [
-        '10 Forums',
-        '10,000 Members Each',
+        '5 Forums',
+        '5,000 Members Each',
         'All Pro Features',
         'API Access',
         'White-Label Options',
@@ -88,8 +88,8 @@ export default function Pricing() {
       period: 'month',
       description: 'For professional communities',
       features: [
-        '25 Forums',
-        '25,000 Members Each',
+        '10 Forums',
+        '10,000 Members Each',
         'All Growth Features',
         'SSO Integration',
         'Account Manager',
