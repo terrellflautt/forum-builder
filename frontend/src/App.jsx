@@ -4,6 +4,7 @@ import { AuthProvider, useAuth } from './contexts/AuthContext';
 import LandingPage from './pages/LandingPage';
 import Dashboard from './pages/Dashboard';
 import Pricing from './pages/Pricing';
+import Discover from './pages/Discover';
 import Login from './pages/Login';
 import ForumSettings from './pages/ForumSettings';
 
@@ -30,6 +31,7 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/pricing" element={<Pricing />} />
+          <Route path="/discover" element={<Discover />} />
           <Route
             path="/dashboard"
             element={

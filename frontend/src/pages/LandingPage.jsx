@@ -14,6 +14,7 @@ export default function LandingPage() {
             </div>
             <nav className="nav">
               <a href="#features">Features</a>
+              <Link to="/discover">Discover</Link>
               <Link to="/pricing">Pricing</Link>
               <Link to="/login" className="btn btn-primary">Get Started</Link>
             </nav>
@@ -140,6 +141,7 @@ export default function LandingPage() {
             </div>
             <div className="footer-section">
               <h4>Product</h4>
+              <Link to="/discover">Discover</Link>
               <Link to="/pricing">Pricing</Link>
               <a href="#features">Features</a>
               <a href="https://forum.snapitsoftware.com">Support Forum</a>
