@@ -12,26 +12,40 @@ const stripe = new Stripe(STRIPE_SECRET_KEY);
 
 // Pricing configuration
 const PRICING = {
-  pro: {
-    priceId: 'price_pro_monthly', // Replace with actual Stripe price ID
-    name: 'Pro',
-    maxForums: 3,
-    maxMembersPerForum: 5000,
+  starter: {
+    priceId: 'price_1SGUYQIELgsGlpDxbPBbxU7S',
+    name: 'Starter',
+    maxForums: 2,
+    maxMembersPerForum: 2000,
     price: 1900 // $19.00 in cents
   },
-  business: {
-    priceId: 'price_business_monthly', // Replace with actual Stripe price ID
-    name: 'Business',
-    maxForums: 10,
-    maxMembersPerForum: 25000,
+  pro: {
+    priceId: 'price_1SGUYuIELgsGlpDxzsQONeNH',
+    name: 'Pro',
+    maxForums: 5,
+    maxMembersPerForum: 5000,
     price: 4900 // $49.00 in cents
   },
+  growth: {
+    priceId: 'price_1SGUYcIELgsGlpDxUjapKJIC',
+    name: 'Growth',
+    maxForums: 10,
+    maxMembersPerForum: 10000,
+    price: 9900 // $99.00 in cents
+  },
+  business: {
+    priceId: 'price_1SGUYcIELgsGlpDxrBbtL6FR',
+    name: 'Business',
+    maxForums: 25,
+    maxMembersPerForum: 25000,
+    price: 19900 // $199.00 in cents
+  },
   enterprise: {
-    priceId: 'price_enterprise_monthly', // Replace with actual Stripe price ID
+    priceId: 'price_1SGUYdIELgsGlpDxp5wGctfv',
     name: 'Enterprise',
     maxForums: -1, // Unlimited
     maxMembersPerForum: -1, // Unlimited
-    price: 14900 // $149.00 in cents
+    price: 49900 // $499.00 in cents
   }
 };
 

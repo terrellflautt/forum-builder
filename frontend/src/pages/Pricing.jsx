@@ -27,39 +27,75 @@ export default function Pricing() {
       popular: false
     },
     {
+      tier: 'starter',
+      name: 'Starter',
+      price: 19,
+      period: 'month',
+      description: 'For small communities',
+      features: [
+        '2 Forums',
+        '2,000 Members Each',
+        'Premium Themes',
+        'Email Support',
+        'Custom CSS',
+        'Advanced Analytics'
+      ],
+      cta: 'Start Growing',
+      popular: false
+    },
+    {
       tier: 'pro',
       name: 'Pro',
-      price: 19,
+      price: 49,
       period: 'month',
       description: 'Best for growing communities',
       features: [
-        '3 Forums',
+        '5 Forums',
         '5,000 Members Each',
-        'Premium Themes',
-        'Custom CSS',
-        'Priority Support',
-        'Advanced Analytics',
+        'All Starter Features',
         'Custom Domain',
-        'No Branding'
+        'Priority Support',
+        'Remove Branding',
+        'SSL Included',
+        '99.9% Uptime SLA'
       ],
-      cta: 'Upgrade to Pro',
+      cta: 'Go Pro',
       popular: true
+    },
+    {
+      tier: 'growth',
+      name: 'Growth',
+      price: 99,
+      period: 'month',
+      description: 'For scaling businesses',
+      features: [
+        '10 Forums',
+        '10,000 Members Each',
+        'All Pro Features',
+        'API Access',
+        'White-Label Options',
+        'Dedicated Support',
+        'Custom Integrations',
+        'Monthly Check-ins'
+      ],
+      cta: 'Scale Up',
+      popular: false
     },
     {
       tier: 'business',
       name: 'Business',
-      price: 49,
+      price: 199,
       period: 'month',
       description: 'For professional communities',
       features: [
-        '10 Forums',
+        '25 Forums',
         '25,000 Members Each',
-        'All Pro Features',
-        'White-Label Options',
-        'Dedicated Support',
-        'API Access',
-        'Custom Integrations',
-        'SLA Guarantee'
+        'All Growth Features',
+        'SSO Integration',
+        'Account Manager',
+        'Advanced Security',
+        'Data Migration',
+        'Implementation Support'
       ],
       cta: 'Go Business',
       popular: false
@@ -67,7 +103,7 @@ export default function Pricing() {
     {
       tier: 'enterprise',
       name: 'Enterprise',
-      price: 149,
+      price: 499,
       period: 'month',
       description: 'Unlimited scale and customization',
       features: [
@@ -76,9 +112,9 @@ export default function Pricing() {
         'All Business Features',
         'Custom Development',
         '24/7 Phone Support',
-        'Dedicated Account Manager',
-        'On-premise Option',
-        'Custom SLA'
+        'On-Premise Option',
+        'Custom SLA',
+        'Dedicated DevOps'
       ],
       cta: 'Contact Sales',
       popular: false
