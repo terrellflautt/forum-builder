@@ -248,6 +248,8 @@ resources:
             AttributeType: S
           - AttributeName: email
             AttributeType: S
+          - AttributeName: stripeCustomerId
+            AttributeType: S
         KeySchema:
           - AttributeName: userId
             KeyType: HASH
@@ -255,6 +257,12 @@ resources:
           - IndexName: EmailIndex
             KeySchema:
               - AttributeName: email
+                KeyType: HASH
+            Projection:
+              ProjectionType: ALL
+          - IndexName: StripeCustomerIndex
+            KeySchema:
+              - AttributeName: stripeCustomerId
                 KeyType: HASH
             Projection:
               ProjectionType: ALL
