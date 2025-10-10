@@ -2,7 +2,7 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 
 const AuthContext = createContext();
 
-const API_URL = import.meta.env.VITE_API_URL || 'https://api.forums.snapitsoftware.com';
+const API_URL = import.meta.env.VITE_API_URL || 'https://auth.snapitsoftware.com';
 const GOOGLE_CLIENT_ID = '242648112266-g4qgi0h2vumodsecqmej68qb9r6odmp2.apps.googleusercontent.com';
 
 export function useAuth() {

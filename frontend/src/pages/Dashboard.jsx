@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '../contexts/AuthContext';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import './Dashboard.css';
 
 export default function Dashboard() {
@@ -23,7 +23,7 @@ export default function Dashboard() {
 
   const fetchForums = async () => {
     try {
-      const response = await fetch(`${API_URL}/platform/forums`, {
+      const response = await fetch(`${API_URL}/forums`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -46,7 +46,7 @@ export default function Dashboard() {
     setCreating(true);
 
     try {
-      const response = await fetch(`${API_URL}/platform/forums`, {
+      const response = await fetch(`${API_URL}/forums`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -85,7 +85,7 @@ export default function Dashboard() {
     }
 
     try {
-      const response = await fetch(`${API_URL}/platform/forums/${forumId}`, {
+      const response = await fetch(`${API_URL}/forums/${forumId}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`
@@ -227,6 +227,12 @@ export default function Dashboard() {
                       </div>
                     </div>
                     <div className="forum-actions">
+                      <Link
+                        to={`/forum/${forum.forumId}/settings`}
+                        className="btn btn-primary"
+                      >
+                        Manage Settings
+                      </Link>
                       <a
                         href={`https://${forum.subdomain}.forums.snapitsoftware.com`}
                         target="_blank"

@@ -5,6 +5,7 @@ import LandingPage from './pages/LandingPage';
 import Dashboard from './pages/Dashboard';
 import Pricing from './pages/Pricing';
 import Login from './pages/Login';
+import ForumSettings from './pages/ForumSettings';
 
 function PrivateRoute({ children }) {
   const { user, loading } = useAuth();
@@ -34,6 +35,14 @@ function App() {
             element={
               <PrivateRoute>
                 <Dashboard />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/forum/:forumId/settings"
+            element={
+              <PrivateRoute>
+                <ForumSettings />
               </PrivateRoute>
             }
           />
