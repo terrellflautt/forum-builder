@@ -52,7 +52,7 @@ export function AuthProvider({ children }) {
 
   const loginWithGoogle = async (credential) => {
     try {
-      const response = await fetch(`${API_URL}/auth/google`, {
+      const response = await fetch(`${API_URL}/auth/forum-builder/google`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

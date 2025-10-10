@@ -109,7 +109,7 @@ export default function Dashboard() {
   const getTierInfo = () => {
     const tier = user?.subscriptionTier || 'free';
     const limits = {
-      free: { forums: 1, members: 500, name: 'Free' },
+      free: { forums: 1, members: 2000, name: 'Free' },
       pro: { forums: 3, members: 5000, name: 'Pro' },
       business: { forums: 10, members: 25000, name: 'Business' },
       enterprise: { forums: -1, members: -1, name: 'Enterprise' }
