@@ -56,7 +56,7 @@ exports.google = async (event) => {
         subscription: 'free',
         forumCount: 0,
         maxForums: 1,
-        maxMembersPerForum: 500
+        maxMembersPerForum: 2000 // Updated per strategic research - aligns with ProBoards expectations
       };
 
       await dynamodb.put({

@@ -10,7 +10,8 @@ const STRIPE_WEBHOOK_SECRET = process.env.STRIPE_WEBHOOK_SECRET;
 
 const stripe = new Stripe(STRIPE_SECRET_KEY);
 
-// Pricing configuration
+// Pricing configuration - aligned with competitive research
+// Free tier: 1 forum, 2000 members (updated from 500 per strategic blueprint)
 const PRICING = {
   starter: {
     priceId: 'price_1SGUYQIELgsGlpDxbPBbxU7S',
@@ -24,21 +25,28 @@ const PRICING = {
     name: 'Pro',
     maxForums: 5,
     maxMembersPerForum: 5000,
-    price: 4900 // $49.00 in cents
+    price: 4900, // $49.00 in cents - THE CONVERSION ANCHOR
+    // Key features: Custom Domain + Branding Removal (undercuts Discourse by $51)
+    includesCustomDomain: true,
+    includesBrandingRemoval: true
   },
   growth: {
     priceId: 'price_1SGUYcIELgsGlpDxUjapKJIC',
     name: 'Growth',
     maxForums: 10,
     maxMembersPerForum: 10000,
-    price: 9900 // $99.00 in cents
+    price: 9900, // $99.00 in cents
+    includesAPI: true,
+    includesWhiteLabel: true
   },
   business: {
     priceId: 'price_1SGUYcIELgsGlpDxrBbtL6FR',
     name: 'Business',
     maxForums: 25,
     maxMembersPerForum: 25000,
-    price: 19900 // $199.00 in cents
+    price: 19900, // $199.00 in cents - B2B VALUE LEADER
+    includesSSO: true, // Massive competitive advantage vs Forumbee ($750)
+    includesAccountManager: true
   },
   enterprise: {
     priceId: 'price_1SGUYdIELgsGlpDxp5wGctfv',

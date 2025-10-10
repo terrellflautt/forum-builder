@@ -17,11 +17,11 @@ export default function Pricing() {
       description: 'Perfect for trying out the platform',
       features: [
         '1 Forum',
-        '500 Members',
+        '2,000 Members',
         'Basic Themes',
         'Community Support',
         'Mobile Responsive',
-        'Basic Analytics'
+        'SnapIT Branding'
       ],
       cta: 'Get Started Free',
       popular: false
@@ -48,14 +48,14 @@ export default function Pricing() {
       name: 'Pro',
       price: 49,
       period: 'month',
-      description: 'Best for growing communities',
+      description: 'Professional brand control at half the cost',
       features: [
         '5 Forums',
         '5,000 Members Each',
         'All Starter Features',
-        'Custom Domain',
+        '✨ Custom Domain',
+        '✨ Remove Branding',
         'Priority Support',
-        'Remove Branding',
         'SSL Included',
         '99.9% Uptime SLA'
       ],
