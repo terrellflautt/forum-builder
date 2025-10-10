@@ -10,21 +10,21 @@ const STRIPE_WEBHOOK_SECRET = process.env.STRIPE_WEBHOOK_SECRET;
 
 const stripe = new Stripe(STRIPE_SECRET_KEY);
 
-// Pricing configuration - Profit-optimized while maintaining competitive edge
-// Free tier: 1 forum, 500 members (forces faster upgrades, reduces infrastructure costs)
+// Pricing configuration - Market-aligned per research document
+// Free tier: 1 forum, 2000 members (market expectation, drives adoption and upsells)
 const PRICING = {
   starter: {
     priceId: 'price_1SGUYQIELgsGlpDxbPBbxU7S',
     name: 'Starter',
-    maxForums: 1,
-    maxMembersPerForum: 1500,
+    maxForums: 2,
+    maxMembersPerForum: 2000,
     price: 1900 // $19.00 in cents
   },
   pro: {
     priceId: 'price_1SGUYuIELgsGlpDxzsQONeNH',
     name: 'Pro',
-    maxForums: 3,
-    maxMembersPerForum: 3000,
+    maxForums: 5,
+    maxMembersPerForum: 5000,
     price: 4900, // $49.00 in cents - THE CONVERSION ANCHOR
     // Key features: Custom Domain + Branding Removal (undercuts Discourse by $51)
     includesCustomDomain: true,
@@ -33,8 +33,8 @@ const PRICING = {
   growth: {
     priceId: 'price_1SGUYcIELgsGlpDxUjapKJIC',
     name: 'Growth',
-    maxForums: 5,
-    maxMembersPerForum: 5000,
+    maxForums: 10,
+    maxMembersPerForum: 10000,
     price: 9900, // $99.00 in cents
     includesAPI: true,
     includesWhiteLabel: true
@@ -42,8 +42,8 @@ const PRICING = {
   business: {
     priceId: 'price_1SGUYcIELgsGlpDxrBbtL6FR',
     name: 'Business',
-    maxForums: 10,
-    maxMembersPerForum: 10000,
+    maxForums: 25,
+    maxMembersPerForum: 25000,
     price: 19900, // $199.00 in cents - B2B VALUE LEADER
     includesSSO: true, // Massive competitive advantage vs Forumbee ($750)
     includesAccountManager: true
@@ -259,7 +259,7 @@ exports.getSubscription = async (event) => {
         currentPeriodEnd: subscription?.currentPeriodEnd,
         maxForums: user?.maxForums || 1,
         forumCount: user?.forumCount || 0,
-        maxMembersPerForum: user?.maxMembersPerForum || 500
+        maxMembersPerForum: user?.maxMembersPerForum || 2000
       })
     };
 
@@ -416,7 +416,7 @@ async function handleSubscriptionDeleted(subscription) {
       ExpressionAttributeValues: {
         ':free': 'free',
         ':maxForums': 1,
-        ':maxMembers': 500
+        ':maxMembers': 2000
       }
     });
 
